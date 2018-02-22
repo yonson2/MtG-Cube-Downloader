@@ -1,0 +1,43 @@
+{
+  "name": "CubeTutor-IMG-downloader",
+  "version": "1.0.0",
+  "description": "Downloads all images for .txt files exported from cubetutor.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "precommit": "lint-staged",
+    "prepush": "npm run lint && npm run test",
+    "test": "ava",
+    "lint": "eslint index.js src/** config/**"
+  },
+  "lint-staged": {
+    "*.{js,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenfulfillment/skeleton.git"
+  },
+  "author": "Peter S. <s@pramos.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenfulfillment/skeleton/issues"
+  },
+  "homepage": "https://github.com/zenfulfillment/skeleton#readme",
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "eslint": "^4.8.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-require-path-exists": "^1.1.7",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.3",
+    "prettier": "^1.7.4"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "got": "^8.2.0"
+  }
+}

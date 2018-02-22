@@ -1,0 +1,23 @@
+{
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:require-path-exists/recommended",
+    "prettier"
+  ],
+  "plugins": ["require-path-exists"],
+  "rules": {
+    "no-console": "off"
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 8
+  }
+}
